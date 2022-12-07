@@ -34,4 +34,4 @@ instructions.slice(1).forEach(instruction => {
     }
 });
 
-console.log(allNodes.filter(node => node.size <= 100000).reduce((a,x) => a + x));
+console.log(allNodes.map(node => node.size).filter(size => size <= 100000).reduce((a,x) => a + x));
