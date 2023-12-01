@@ -3,7 +3,7 @@ let arr = await fetch("https://adventofcode.com/2022/day/4/input").then(i => i.t
 const res = arr.map(line => {
     const ranges = line.split(',');
     const [xMin, xMax] = ranges[0].split('-').map(x => Number(x));
-    const [yMin, yMax] = ranges[1].split('-').map(x => Number(x));;
+    const [yMin, yMax] = ranges[1].split('-').map(x => Number(x));
     if (xMin >= yMin && xMin <= yMax || xMax >= yMin && xMax <= yMax ||
         yMin >= xMin && yMin <= xMax || yMax >= xMin && yMax <= xMax) {
         return 1;
